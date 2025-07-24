@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <title>24節氣圓圖互動</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 20px;
+      }
+
+      #container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+      }
+
+      #info {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        transform: translate(-50%, -50%);
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #333;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 10px;
+        border-radius: 10px;
+        pointer-events: none;
+        z-index: 10;
+        text-align: center;
+        line-height: 1.4;
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      svg {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+
+      .segment:hover {
+        fill-opacity: 0.7;
+        cursor: pointer;
+      }
+
+      text {
+        user-select: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>24節氣圓圖互動</h2>
+
+    <div id="container">
+      <svg viewBox="-500 -500 1000 1000" preserveAspectRatio="xMidYMid meet">
+        <g id="circle-group">
+          <!-- JS 動態產生 -->
+        </g>
+      </svg>
+      <div id="info">請點選節氣</div>
+    </div>
+
+    <script>
+      const solarTerms = [
+        { name: "立春", meaning: "春季開始，萬物復甦。" },
+        { name: "雨水", meaning: "降雨開始增多。" },
+        { name: "驚蟄", meaning: "春雷驚醒冬眠動物。" },
+        { name: "春分", meaning: "晝夜平分，春季中點。" },
+        { name: "清明", meaning: "氣候清爽明朗，掃墓祭祖節氣。" },
+        { name: "穀雨", meaning: "春雨滋潤，穀物生長。" },
+        { name: "立夏", meaning: "夏天開始，氣溫漸升。" },
+        { name: "小滿", meaning: "作物小有收成，將滿未滿。" },
+        { name: "芒種", meaning: "適合種植有芒的穀類。" },
+        { name: "夏至", meaning: "白晝最長，氣溫漸熱。" },
+        { name: "小暑", meaning: "天氣開始炎熱。" },
+        { name: "大暑", meaning: "一年中最熱時期。" },
+        { name: "立秋", meaning: "秋天開始，暑氣未消。" },
+        { name: "處暑", meaning: "暑氣逐漸消退。" },
+        { name: "白露", meaning: "早晨出現露水，天氣轉涼。" },
+        { name: "秋分", meaning: "晝夜再度平分，秋季中點。" },
+        { name: "寒露", meaning: "露水更冷，氣溫下降。" },
+        { name: "霜降", meaning: "出現霜，秋季結束。" },
+        { name: "立冬", meaning: "冬季開始，天氣漸冷。" },
+        { name: "小雪", meaning: "初雪出現。" },
+        { name: "大雪", meaning: "降雪增多。" },
+        { name: "冬至", meaning: "黑夜最長，冬季中點。" },
+        { name: "小寒", meaning: "進入寒冷時期。" },
+        { name: "大寒", meaning: "一年中最冷時節。" },
+      ];
+
+      const group = document.getElementById("circle-group");
+      const info = document.getElementById("info");
+
+      const radius = 450;
+      const segments = 24;
+      const anglePer = 360 / segments;
+      const rad = Math.PI / 180;
+
+      for (let i = 0; i < segments; i++) {
+        const startAngle = i * anglePer;
+        const endAngle = startAngle + anglePer;
+
+        const x1 = radius * Math.cos(startAngle * rad);
+        const y1 = radius * Math.sin(startAngle * rad);
+        const x2 = radius * Math.cos(endAngle * rad);
+        const y2 = radius * Math.sin(endAngle * rad);
+
+        const path = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "path"
+        );
+        const d = `
+      M 0 0 
+      L ${x1} ${y1} 
+      A ${radius} ${radius} 0 0 1 ${x2} ${y2} 
+      Z
+    `;
+        path.setAttribute("d", d.trim());
+        path.setAttribute("fill", `hsl(${i * 15}, 70%, 70%)`);
+        path.setAttribute("class", "segment");
+        path.setAttribute("data-name", solarTerms[i].name);
+        path.setAttribute("data-meaning", solarTerms[i].meaning);
+
+        path.addEventListener("click", (e) => {
+          const name = e.target.getAttribute("data-name");
+          const meaning = e.target.getAttribute("data-meaning");
+          info.textContent = `${name}：${meaning}`;
+        });
+
+        group.appendChild(path);
+
+        // 節氣文字標籤
+        const labelAngle = (startAngle + anglePer / 2) * rad;
+        const labelRadius = radius * 0.75;
+        const lx = labelRadius * Math.cos(labelAngle);
+        const ly = labelRadius * Math.sin(labelAngle);
+
+        const text = document.createElementNS(
+          "http://www.w3.org/2000/svg",
+          "text"
+        );
+        text.setAttribute("x", lx);
+        text.setAttribute("y", ly);
+        text.setAttribute("fill", "#333");
+        text.setAttribute("font-size", "20");
+        text.setAttribute("text-anchor", "middle");
+        text.setAttribute("alignment-baseline", "middle");
+        text.textContent = solarTerms[i].name;
+
+        group.appendChild(text);
+      }
+    </script>
+  </body>
+</html>
