@@ -1,0 +1,91 @@
+.font-size-48 {
+  font-size: 48px;
+}
+.font-weight-400 {
+  font-weight: 400;
+}
+.font-weight-700 {
+  font-weight: 700;
+}
+.line-height-12 {
+  line-height: 1.2;
+}
+.line-height-15 {
+  line-height: 1.5;
+}
+
+.h1 {
+  font-size: 40px;
+}
+.h2 {
+  font-size: 32px;
+}
+.h3 {
+  font-size: 28px;
+}
+.h4 {
+  font-size: 24px;
+}
+.h5 {
+  font-size: 20px;
+}
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+.p {
+  font-weight: 400;
+  line-height: 1.5;
+}
+@media (max-width: 767px) {
+  .h2-md {
+    font-size: 32px;
+  }
+  .h3-md {
+    font-size: 28px;
+  }
+  .h4-md {
+    font-size: 24px;
+  }
+  .h5-md {
+    font-size: 20px;
+  }
+  .h6-md {
+    font-size: 16px;
+  }
+}
+
+.txt-align-center {
+  text-align: center;
+}
+@media (max-width: 767px) {
+  .txt-align-md-left {
+    text-align: left;
+  }
+}
+
+.txt-white {
+  color: #ffffff;
+}
+.txt-primary-300 {
+  color: var(--primary-300);
+}
+.txt-primary-400 {
+  color: var(--primary-400);
+}
+.txt-neutral-500 {
+  color: var(--neutral-500);
+}
+.txt-neutral-600 {
+  color: var(--neutral-600);
+}
+
+/* bi font */
+.width-40 {
+  width: 40px;
+}

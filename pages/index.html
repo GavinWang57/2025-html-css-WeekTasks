@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>鞋子電商</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <%- include('./layout/nav'); -%>
+    <nav class="sub-nav container">
+      <ul class="col-md-4 sub-nav d-flex txt-align-center">
+        <li class="col-md-2 bg-primary-100">
+          <a class="d-none d-md-block link py-12" href="products.html"
+            >商品列表</a
+          >
+        </li>
+        <li class="col-md-2 bg-primary-100">
+          <a class="d-none d-md-block link py-12" href="story.html">品牌故事</a>
+        </li>
+      </ul>
+    </nav>
+
+    <section class="index-banner mb-64 mb-md-40">
+      <div class="banner-content">
+        <div class="banner-txt txt-white">
+          <h1 class="banner-title mb-16 mb-md-8">URBNSTEP</h1>
+          <h3 class="h3 h5-md mb-48 mb-md-32">Your Step, Your Statement</h3>
+          <a href="#" class="btn-primary-fill font-weight-400 line-height-15"
+            >立即選購</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <section class="new-arrival container mb-48 mb-md-24">
+      <div class="row">
+        <div class="col-12 txt-align-center mb-32 mb-md-24">
+          <p
+            class="font-size-48 line-height-12 font-weight-700 mb-12 mb-md-8 h2-md"
+          >
+            New Arrival
+          </p>
+          <p class="h2 h4-md">新品上市</p>
+        </div>
+      </div>
+      <ul class="row d-flex d-flex-wrap row-md pb-24 pb-md-16">
+        <li class="new-card col-6 col-md-2 mb-40 mb-md-24">
+          <a href="#" class="link">
+            <img
+              src="../assets/images/new-1.png"
+              alt="New Product 1"
+              class="new-card-img"
+            />
+            <p class="new-card-title h5 h6-md">Monoverse</p>
+            <p class="new-card-price">NT$3,600</p>
+          </a>
+        </li>
+        <li class="new-card col-6 col-md-2 mb-40 mb-md-24">
+          <a href="#" class="link">
+            <img
+              src="../assets/images/new-2.png"
+              alt="New Product 2"
+              class="new-card-img"
+            />
+            <p class="new-card-title h5 h6-md">PLATFORM 404</p>
+            <p class="new-card-price">NT$2,600</p>
+          </a>
+        </li>
+        <li class="new-card col-6 col-md-2 mb-40 mb-md-24">
+          <a href="#" class="link">
+            <img
+              src="../assets/images/new-3.png"
+              alt="New Product 3"
+              class="new-card-img"
+            />
+            <p class="new-card-title h5 h6-md">URBN Force</p>
+            <p class="new-card-price">NT$3,200</p>
+          </a>
+        </li>
+        <li class="new-card col-6 col-md-2 mb-40 mb-md-24">
+          <a href="#" class="link">
+            <img
+              src="../assets/images/new-4.png"
+              alt="New Product 4"
+              class="new-card-img"
+            />
+            <p class="new-card-title h5 h6-md">Mode90</p>
+            <p class="new-card-price">NT$4,000</p>
+          </a>
+        </li>
+      </ul>
+      <div class="py-64 py-md-40">
+        <h2 class="h2 h4-md mb-16 py-5 py-md-5-5">熱銷補貨</h2>
+        <ul class="row row-md d-flex">
+          <li class="hot-card col-3">
+            <p class="hot-tag">人氣 No.1</p>
+            <a href="#" class="link">
+              <img
+                src="../assets/images/hot-1.png"
+                alt="Hot Product 1"
+                class="hot-card-img"
+              />
+            </a>
+          </li>
+          <li class="hot-card col-3">
+            <p class="hot-tag">人氣 No.1</p>
+            <a href="#" class="link">
+              <img
+                src="../assets/images/hot-2.png"
+                alt="Hot Product 2"
+                class="hot-card-img"
+              />
+            </a>
+          </li>
+          <li class="hot-card col-3">
+            <p class="hot-tag">人氣 No.1</p>
+            <a href="#" class="link">
+              <img
+                src="../assets/images/hot-3.png"
+                alt="Hot Product 3"
+                class="hot-card-img"
+              />
+            </a>
+          </li>
+          <li class="hot-card col-3">
+            <p class="hot-tag">人氣 No.1</p>
+            <a href="#" class="link">
+              <img
+                src="../assets/images/hot-4.png"
+                alt="Hot Product 4"
+                class="hot-card-img"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="sale mb-48 mb-md-24">
+      <div class="sale-content txt-white mb-32 mb-md-24">
+        <div class="d-flex justify-center align-center d-flex-md-column mb-16">
+          <p class="sale-title mb-md-8">URBNSTEP</p>
+          <p class="x txt-primary-300 mb-md-8">x</p>
+          <p class="sale-title">Kevin Chen</p>
+        </div>
+        <h2 class="h2 h5-md txt-align-center">跨界聯名，限量發售</h2>
+      </div>
+      <div
+        class="sale-txt txt-neutral-500 d-flex justify-center align-center d-flex-md-column mb-48 mb-md-32"
+      >
+        <p class="mb-md-4">新銳漫畫家 Kevin Chen 親自操刀設計</p>
+        <p>街頭能量全面引爆！</p>
+      </div>
+      <div class="d-flex justify-center">
+        <a href="#" class="btn-primary-fill bg-primary-300">立即搶購</a>
+      </div>
+      <img src="../assets/images/star.svg" alt="星星" class="img-star" />
+      <img
+        src="../assets/images/sparkle.svg"
+        alt="sparkle"
+        class="img-sparkle"
+      />
+    </section>
+
+    <section class="py-64 py-md-40">
+      <div class="buy-it container">
+        <h2 class="h2 mb-16">依系列選購</h2>
+        <ul class="buy-it-list row d-flex d-flex-wrap row-md">
+          <li class="buy-it-item col-3 col-md-2 mb-md-12">
+            <img
+              src="../assets/images/hot-1.png"
+              alt="hot-1"
+              class="buy-it-img"
+            />
+            <div
+              class="buy-it-txt txt-white d-flex d-flex-column justify-center align-center"
+            >
+              <h3 class="h3 h6-md mb-8">URBN RUNNER</h3>
+              <h4 class="h4 h6-md">慢跑系列</h4>
+            </div>
+          </li>
+          <li class="buy-it-item col-3 col-md-2 mb-md-12">
+            <img
+              src="../assets/images/hot-2.png"
+              alt="hot-2"
+              class="buy-it-img"
+            />
+            <div
+              class="buy-it-txt txt-white d-flex d-flex-column justify-center align-center"
+            >
+              <h3 class="h3 h6-md mb-8">STREETMODE</h3>
+              <h4 class="h4 h6-md">滑板系列</h4>
+            </div>
+          </li>
+          <li class="buy-it-item col-3 col-md-2 mb-md-12">
+            <img
+              src="../assets/images/hot-3.png"
+              alt="hot-3"
+              class="buy-it-img"
+            />
+            <div
+              class="buy-it-txt txt-white d-flex d-flex-column justify-center align-center"
+            >
+              <h3 class="h3 h6-md mb-8">CHUNK DISTRICT</h3>
+              <h4 class="h4 h6-md">厚底系列</h4>
+            </div>
+          </li>
+          <li class="buy-it-item col-3 col-md-2 mb-md-12">
+            <img
+              src="../assets/images/hot-4.png"
+              alt="hot-4"
+              class="buy-it-img"
+            />
+            <div
+              class="buy-it-txt txt-white d-flex d-flex-column justify-center align-center"
+            >
+              <h3 class="h3 h6-md mb-8">COLLAB ZONE</h3>
+              <h4 class="h4 h6-md">聯名企劃</h4>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="style container py-64 py-md-40">
+      <h2 class="h2 h4-md mb-16">穿搭靈感</h2>
+      <div class="style-imgs d-flex d-flex-wrap d-flex-md-nowrap">
+        <div class="style-1 col-4 style-md-width-100 d-flex d-flex-wrap row-md">
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-1-1.png"
+              alt="style-1-1"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-1-2.png"
+              alt="style-1-2"
+              class="style-img"
+            />
+          </div>
+          <div class="col-12 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-1-3.png"
+              alt="style-1-3"
+              class="style-img"
+            />
+          </div>
+        </div>
+        <div class="sryle-2 col-4 style-md-width-100 d-flex d-flex-wrap row-md">
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-2-1.png"
+              alt="style-2-1"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-2-2.png"
+              alt="style-2-2"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-2-3.png"
+              alt="style-2-3"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-2-4.png"
+              alt="style-2-4"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-2-5.png"
+              alt="style-2-5"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-2-6.png"
+              alt="style-2-6"
+              class="style-img"
+            />
+          </div>
+        </div>
+        <div class="style-3 col-4 style-md-width-100 d-flex d-flex-wrap row-md">
+          <div class="col-12 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-3-1.png"
+              alt="style-3-1"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-3-2.png"
+              alt="style-3-2"
+              class="style-img"
+            />
+          </div>
+          <div class="col-6 style-md-width-100 mb-8 mb-md-0">
+            <img
+              src="../assets/images/style/style-3-3.png"
+              alt="style-3-3"
+              class="style-img"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <%- include('./layout/footer'); -%>
+  </body>
+</html>

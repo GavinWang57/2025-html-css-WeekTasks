@@ -1,0 +1,39 @@
+.hero-content {
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("../images/story/Hero-Section.png") no-repeat center center;
+  background-size: cover;
+}
+
+@media (max-width: 767px) {
+  .main-img {
+    margin-left: -12px;
+  }
+}
+
+.time-list {
+  list-style: disc;
+  padding-left: 28px;
+  font-weight: 400;
+}
+.time-item {
+  border-right: 1px solid var(--neutral-900);
+  padding-right: 8px;
+  margin-right: 8px;
+}
+@media (max-width: 767px) {
+  .time-list {
+    padding-left: 24px;
+  }
+  .time-item {
+    border-right: none;
+    padding-right: 0;
+    margin-right: 0;
+  }
+  .time-item::after {
+    content: "｜";
+  }
+}
+.bi.bi-arrow-up-right {
+  width: 20px;
+  height: 20px;
+}

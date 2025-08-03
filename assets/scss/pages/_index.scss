@@ -1,0 +1,199 @@
+.index-banner {
+  .banner-content {
+    background: url("../images/banner.png") no-repeat center center;
+    background-size: cover;
+  }
+  .banner-txt {
+    font-weight: 700;
+    line-height: 1.2;
+    padding-top: 289px;
+    padding-bottom: 288px;
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+  .banner-title {
+    font-size: 64px;
+  }
+  @media (max-width: 767px) {
+    .banner-content {
+      background: url("../images/banner-sm.png") no-repeat center center;
+      background-size: 100% auto;
+    }
+    .banner-title {
+      font-size: 48px;
+    }
+    .banner-txt {
+      padding: 155px 24px;
+    }
+  }
+}
+
+.new-arrival {
+  .hot-card {
+    position: relative;
+  }
+  .hot-tag {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    padding: 8px 12px;
+    background-color: var(--primary-100);
+    color: var(--primary-400);
+    font-size: 14px;
+    border-radius: 4px;
+  }
+  @media (max-width: 767px) {
+    .row-md {
+      margin-left: -8px;
+      margin-right: -8px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+    .row-md > * {
+      flex: 0 0 auto; /* 不允許縮小 */
+    }
+    .hot-card {
+      min-width: 316px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+}
+
+/* sale */
+.sale {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background: url("../images/sale.png") no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  .sale-title {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+  .x {
+    font-size: 40px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  .sale-txt {
+    font-weight: 400;
+    font-size: 20px;
+  }
+  .img-star {
+    width: 48px;
+    position: absolute;
+    top: 68px;
+    left: calc(50% - 397px);
+  }
+  .img-sparkle {
+    width: 76px;
+    position: absolute;
+    bottom: 132px;
+    right: calc(50% - 357px);
+  }
+  @media (max-width: 767px) {
+    .sale {
+      padding-top: 64px;
+      padding-bottom: 64px;
+      background: url("../images/sale-md.png") no-repeat;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .sale-title {
+      font-size: 32px;
+    }
+    .x {
+      font-size: 28px;
+    }
+    .sale-txt {
+      font-size: 16px;
+    }
+    .img-star {
+      top: 32px;
+      left: calc(50% - 207.5px);
+    }
+    .img-sparkle {
+      bottom: 104px;
+      right: -28px;
+    }
+  }
+}
+
+/* buy-it */
+.buy-it {
+  .buy-it-item {
+    position: relative;
+  }
+  .buy-it-txt {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgb(0, 0, 0, 0.4);
+    width: calc(100% - 24px);
+    height: calc(100%);
+  }
+  @media (max-width: 767px) {
+    .buy-it-list {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .buy-it-txt {
+      width: calc(100% - 12px);
+    }
+  }
+}
+
+/* style */
+.style {
+  overflow: hidden;
+  .container {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .row {
+    margin-left: -4px;
+    margin-right: -4px;
+  }
+  .col-4 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .col-6,
+  .col-12 {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  @media (max-width: 767px) {
+    .container {
+      padding-left: 12px;
+      padding-right: 12px;
+    }
+    .col-4,
+    .col-6,
+    .col-12 {
+      width: unset;
+      padding: 0;
+    }
+    .style-imgs {
+      margin-left: -8px;
+      margin-right: -8px;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+    }
+    .style-imgs > * {
+      flex: 0 0 auto; /* 不允許縮小 */
+    }
+    .style-img {
+      padding: 0 8px;
+      max-width: 300px;
+    }
+  }
+}

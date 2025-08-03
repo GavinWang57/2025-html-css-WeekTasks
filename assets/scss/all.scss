@@ -1,0 +1,23 @@
+// @import './layout/header.scss';
+// @import './layout/footer.scss';
+// @import './pages/index.scss';
+
+/* 模組化檔案 */
+@import "reset.scss"; /* 重置樣式 */
+@import "variables.scss"; /* css 變數設定 */
+@import "./layout/base"; /* 標籤基本樣式 */
+@import "./layout/utils"; /* 網站通用樣式 */
+@import "./layout/margin"; /* 網站通用樣式 */
+@import "./layout/padding"; /* 網站通用樣式 */
+@import "./layout/font"; /* 網站通用樣式 */
+@import "./layout/background"; /* 網站通用樣式 */
+
+@import "./layout/components"; /* 網站元件樣式 */
+
+@import "./pages/index"; /* 首頁 */
+@import "./pages/story"; /* 故事頁 */
+@import "./pages/products"; /* 產品列表 */
+
+.chk-line {
+  outline: 1px solid red;
+}

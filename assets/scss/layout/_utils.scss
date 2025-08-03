@@ -1,0 +1,152 @@
+:root {
+  /* 格線參數*/
+  --gap: calc(24px / 2);
+  --col-1-12: calc(100% / 12);
+}
+
+.container {
+  max-width: 1296px;
+  margin: 0 auto;
+}
+.row {
+  margin-left: calc(var(--gap) * -1);
+  margin-right: calc(var(--gap) * -1);
+}
+
+.col-1 {
+  width: calc(var(--col-1-12) * 1);
+}
+.col-2 {
+  width: calc(var(--col-1-12) * 2);
+}
+.col-3 {
+  width: calc(var(--col-1-12) * 3);
+}
+.col-4 {
+  width: calc(var(--col-1-12) * 4);
+}
+.col-5 {
+  width: calc(var(--col-1-12) * 5);
+}
+.col-6 {
+  width: calc(var(--col-1-12) * 6);
+}
+.col-7 {
+  width: calc(var(--col-1-12) * 7);
+}
+.col-8 {
+  width: calc(var(--col-1-12) * 8);
+}
+.col-9 {
+  width: calc(var(--col-1-12) * 9);
+}
+.col-10 {
+  width: calc(var(--col-1-12) * 10);
+}
+.col-11 {
+  width: calc(var(--col-1-12) * 11);
+}
+.col-12 {
+  width: calc(var(--col-1-12) * 12);
+}
+.container,
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+}
+@media (max-width: 767px) {
+  :root {
+    --col-md-1-4: calc(100% / 4);
+  }
+  .col-md-1 {
+    width: calc(var(--col-1-12) * 1);
+  }
+  .col-md-2 {
+    width: calc(var(--col-md-1-4) * 2);
+  }
+  .col-md-3 {
+    width: calc(var(--col-md-1-4) * 3);
+  }
+  .col-md-4 {
+    width: calc(var(--col-md-1-4) * 4);
+  }
+  .col-md-1,
+  .col-md-2,
+  .col-md-3,
+  .col-md-4 {
+    padding-left: var(--gap);
+    padding-right: var(--gap);
+  }
+}
+
+@media (max-width: 576px) {
+  .d-sm-none {
+    display: none;
+  }
+}
+.d-flex {
+  display: flex;
+}
+.d-flex-row {
+  flex-direction: row;
+}
+.d-flex-column {
+  flex-direction: column;
+}
+.d-flex-wrap {
+  flex-wrap: wrap;
+}
+
+.justify-center {
+  justify-content: center;
+}
+.justify-flex-start {
+  justify-content: flex-start;
+}
+.justify-flex-end {
+  justify-content: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+  .d-flex-md-column {
+    flex-direction: column;
+  }
+  .d-flex-md-nowrap {
+    flex-wrap: nowrap;
+  }
+  .justif-md-flex-start {
+    justify-content: flex-start;
+  }
+  .justif-md-space-between {
+    justify-content: space-between;
+  }
+  .align-md-flex-start {
+    align-items: flex-start;
+  }
+}
+
+.d-none {
+  display: none;
+}
+@media (max-width: 767px) {
+  .d-md-none {
+    display: none;
+  }
+  .d-md-block {
+    display: block;
+  }
+}
