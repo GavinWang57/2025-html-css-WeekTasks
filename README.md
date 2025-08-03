@@ -53,12 +53,3 @@ git push -u origin main // 僅限第一次輸入，往後只需要輸入 git pus
 ```
 
 3. 初始化完畢後，執行 `npm run deploy` 指令進行自動化部署
-
-git init
-git remote add origin https://github.com/GavinWang57/2025-html-css-WeekTask.git
-git add .
-git commit -m "重新上傳整個網頁內容"
-git branch -M main
-git push -f origin main #
-
-https://github.com/GavinWang57/2025-html-css-WeekTasks
